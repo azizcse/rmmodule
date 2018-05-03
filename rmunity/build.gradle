@@ -1,0 +1,89 @@
+apply plugin: 'com.android.library'
+project.ext.set("artifactory_app_username", "arman")
+project.ext.set("artifactory_app_password","caa5062f0a0b21c680b8cf9947c9fca2")
+project.ext.set("artifactory_app_key", "0xa96be965d67eed52d2b4edd44f90bc8abe9b17c8")
+
+buildscript {
+    repositories {
+        maven {
+            url "http://research.rightmesh.io/artifactory/libs-local"
+            credentials {
+                username "arman"
+                password "caa5062f0a0b21c680b8cf9947c9fca2"
+            }
+        }
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'io.left.rightmesh:rightmesh-plugin:1.4'
+    }
+}
+apply plugin: 'io.left.rightmesh.rightmesh-plugin'
+preBuild.dependsOn("rightmesh")
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "http://research.rightmesh.io/artifactory/libs-local"
+        credentials {
+            username "arman"
+            password "caa5062f0a0b21c680b8cf9947c9fca2"
+        }
+    }
+}
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+
+}
+
+buildscript {
+    repositories {
+        jcenter {
+            url "http://jcenter.bintray.com/"
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter {
+            url "http://jcenter.bintray.com/"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    implementation ('io.left.rightmesh:rightmesh-library-dev:0.4.1')
+}
