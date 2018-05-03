@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/RMUnity.iml" filepath="$PROJECT_DIR$/.idea/RMUnity.iml" />
-      <module fileurl="file://D:\UnityGame\AndroidProject\RMUnity\RMmodule.iml" filepath="D:\UnityGame\AndroidProject\RMUnity\RMmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RMUnity.iml" filepath="$PROJECT_DIR$/RMUnity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\UnityGame\AndroidProject\RMUnity\app\app.iml" filepath="D:\UnityGame\AndroidProject\RMUnity\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/rmunity/rmunity.iml" filepath="$PROJECT_DIR$/rmunity/rmunity.iml" />
-      <module fileurl="file://D:\UnityGame\AndroidProject\RMUnity\rmunity\rmunity.iml" filepath="D:\UnityGame\AndroidProject\RMUnity\rmunity\rmunity.iml" />
     </modules>
   </component>
 </project>
