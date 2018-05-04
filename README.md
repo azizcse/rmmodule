@@ -21,7 +21,7 @@ allprojects {
 	}
 	
 
-## How to use
+## How to use this module
 
 In Unity UnityPlayerActivity you need to add below code 
 
