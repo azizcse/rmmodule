@@ -15,6 +15,6 @@ allprojects {
   
   dependencies {
   
-	        implementation 'com.github.azizcse:rmmodule:0.0.1'
+	        implementation 'com.github.azizcse:rmmodule:0.0.2'
 		
 	}
