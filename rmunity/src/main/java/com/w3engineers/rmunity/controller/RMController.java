@@ -32,7 +32,7 @@ import static io.left.rightmesh.mesh.PeerListener.UPDATED;
 
 public class RMController implements MeshStateListener {
     // Port to bind app to.
-    private static final int MESH_PORT = 9084;
+    private static final int MESH_PORT = 45667;
     // MeshManager instance - interface to the mesh network.
     private AndroidMeshManager meshManager = null;
 
@@ -53,7 +53,7 @@ public class RMController implements MeshStateListener {
      * @param context service context to bind to
      */
     public void connect(Context context) {
-        meshManager = AndroidMeshManager.getInstance(context, RMController.this,"Unitygame");
+        meshManager = AndroidMeshManager.getInstance(context, RMController.this,"Unitymodule");
     }
 
     /**
@@ -172,7 +172,9 @@ public class RMController implements MeshStateListener {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("userId", myUserId);
             jsonObject.put("type", 4);// 4 my user id
-            rmService.sendToUnity(jsonObject.toString().getBytes());
+            if(rmService != null) {
+                rmService.sendToUnity(jsonObject.toString().getBytes());
+            }
         }catch (JSONException e){}
     }
 

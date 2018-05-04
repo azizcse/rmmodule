@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
-project.ext.set("artifactory_app_username", "name")
-project.ext.set("artifactory_app_password","password")
-project.ext.set("artifactory_app_key", "key")
+project.ext.set("artifactory_app_username", "arman")
+project.ext.set("artifactory_app_password","caa5062f0a0b21c680b8cf9947c9fca2")
+project.ext.set("artifactory_app_key", "0xa96be965d67eed52d2b4edd44f90bc8abe9b17c8")
 
 buildscript {
     repositories {
         maven {
             url "http://research.rightmesh.io/artifactory/libs-local"
             credentials {
-                username "name"
-                password "password"
+                username "arman"
+                password "caa5062f0a0b21c680b8cf9947c9fca2"
             }
         }
         mavenCentral()
@@ -28,8 +28,8 @@ repositories {
     maven {
         url "http://research.rightmesh.io/artifactory/libs-local"
         credentials {
-            username "name"
-            password "password"
+            username "arman"
+            password "caa5062f0a0b21c680b8cf9947c9fca2"
         }
     }
 }
