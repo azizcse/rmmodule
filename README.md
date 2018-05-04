@@ -1,5 +1,6 @@
-# rmmodule
+# Gradle dependencie
 
+## Root
 allprojects {
 
 		repositories {
@@ -12,7 +13,7 @@ allprojects {
 		
 	}
   
-  
+  ## App
   dependencies {
   
 	        implementation 'com.github.azizcse:rmmodule:0.0.2'
