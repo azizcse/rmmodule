@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/RMUnity.iml" filepath="$PROJECT_DIR$/RMUnity.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rmmodule.iml" filepath="$PROJECT_DIR$/.idea/rmmodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rmunity/rmunity.iml" filepath="$PROJECT_DIR$/rmunity/rmunity.iml" />
       <module fileurl="file://$PROJECT_DIR$/rmunity/rmunity.iml" filepath="$PROJECT_DIR$/rmunity/rmunity.iml" />
     </modules>
   </component>
